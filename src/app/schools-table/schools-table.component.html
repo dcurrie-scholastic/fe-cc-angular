@@ -1,0 +1,17 @@
+<div class="schools-table">
+    <h3 class="schools-table__header">Schools</h3>
+    <table class="table table-striped schools-table__table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Courses</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let school of schools">
+                <td scope="row"><a [routerLink]="['/schools', school.id]">{{school.name}}</a></td>
+                <td>{{school.courses.length}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

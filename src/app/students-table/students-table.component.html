@@ -1,0 +1,17 @@
+<div class="students-table">
+    <h3 class="students-table__header">Students</h3>
+    <table class="table table-striped students-table__table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Courses</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td scope="row"><a [routerLink]="['/students', student.id]">{{student.name.first}} {{student.name.last}}</a></td>
+                <td>{{student.courses.length}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+  <a class="navbar-brand" [routerLink]="['/schools']">Coding Challenge</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/schools']" routerLinkActive="active">Schools</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/courses']" routerLinkActive="active">Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/teachers']" routerLinkActive="active">Teachers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/students']" routerLinkActive="active">Students</a>
+      </li>
+    </ul>
+  </div>
+</nav>
