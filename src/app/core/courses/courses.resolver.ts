@@ -5,9 +5,7 @@ import { Observable } from 'rxjs';
 
 import { CoursesService } from './courses.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CoursesResolver implements Resolve<Array<Course>> {
   constructor(private coursesService: CoursesService) {}
 

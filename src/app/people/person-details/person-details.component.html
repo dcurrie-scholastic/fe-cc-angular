@@ -1,0 +1,8 @@
+<div class="person-details" *ngIf="loaded">
+    <h3 class="person-details__header">{{person.name.first}} {{person.name.last}} ({{person.role}})</h3>
+    <hr class="my-3">
+    <div class="person-details__courses">
+        <h4 class="person-details__courses-header">Courses</h4>
+        <app-courses-table class="person-details__courses-table" [courses]="person.coursesData"></app-courses-table>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="course-details" *ngIf="loaded">
+    <h3 class="course-details__header">{{course.subject}}</h3>
+    <div class="course-details__school">
+        <h4 class="course-details__school-header">School</h4>
+        <div class="course-details__school-info d-flex flex-row justify-content-between">
+            <div class="course-details__school-id">
+                <h6>ID</h6>
+                {{course.school}}
+            </div>
+            <div class="course-details__school-name">
+                <h6>Name</h6>
+                {{course.schoolData.name}}
+            </div>
+            <div class="course-details__school-courses">
+                <h6>Courses</h6>
+                {{course.schoolData.courses.length}}
+            </div>
+        </div>
+    </div>
+    <hr class="my-3">
+    <div class="course-details__teacher">
+        <h4 class="course-details__teacher-header">Teacher</h4>
+        <div class="course-details__teacher-info d-flex flex-row justify-content-between">
+            <div class="course-details__teacher-id">
+                <h6>ID</h6>
+                {{course.teacher}}
+            </div>
+            <div class="course-details__teacher-name">
+                <h6>Name</h6>
+                {{course.teacherData.name.first}} {{course.teacherData.name.last}}
+            </div>
+            <div class="course-details__teacher-courses">
+                <h6>Courses</h6>
+                {{course.teacherData.courses.length}}
+            </div>
+        </div>
+    </div>
+    <hr class="my-3">
+    <div class="course-details__students">
+        <h4 class="course-details__students-header">Students</h4>
+        <app-people-table class="course-details__students-table" [people]="course.studentsData"></app-people-table>
+    </div>
+</div>

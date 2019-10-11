@@ -5,26 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NavbarComponent } from './navbar/navbar.component';
-
-import { SchoolsTableComponent } from './schools-table/schools-table.component';
-import { CoursesTableComponent } from './courses-table/courses-table.component';
-import { TeachersTableComponent } from './teachers-table/teachers-table.component';
-import { StudentsTableComponent } from './students-table/students-table.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    SchoolsTableComponent,
-    CoursesTableComponent,
-    TeachersTableComponent,
-    StudentsTableComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    HttpClientModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

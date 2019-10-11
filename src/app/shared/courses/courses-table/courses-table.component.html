@@ -1,9 +1,10 @@
 <div class="courses-table">
-    <h3 class="courses-table__header">Courses</h3>
+    <h3 class="courses-table__header">{{header}}</h3>
     <table class="table table-striped courses-table__table" *ngIf="loaded">
         <thead>
             <tr>
                 <th scope="col">Subject</th>
+                <th scope="col">School</th>
                 <th scope="col">Teacher</th>
                 <th scope="col">Students</th>
             </tr>
@@ -11,6 +12,7 @@
         <tbody>
             <tr *ngFor="let course of courses">
                 <td scope="row"><a [routerLink]="['/courses', course.id]">{{course.subject}}</a></td>
+                <td>{{course.schoolData.name}}</td>
                 <td>{{course.teacherData.name.first}} {{course.teacherData.name.last}}</td>
                 <td>{{course.students.length}}</td>
             </tr>

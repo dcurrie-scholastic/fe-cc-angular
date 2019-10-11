@@ -10,6 +10,7 @@ declare interface School extends DataObject {
 
 declare interface Course extends DataObject {
     school: string;
+    schoolData?: School;
     subject: string;
     teacher: string;
     teacherData?: Teacher;

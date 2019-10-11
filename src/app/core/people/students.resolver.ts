@@ -4,9 +4,7 @@ import { Resolve } from '@angular/router';
 import { Observable } from 'rxjs';
 import { PeopleService } from './people.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class StudentsResolver implements Resolve<Array<Student>> {
   constructor(private peopleService: PeopleService) {}
 

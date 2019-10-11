@@ -1,0 +1,8 @@
+<div class="school-details" *ngIf="loaded">
+    <h3 class="school-details__header">{{school.name}}</h3>
+    <hr class="my-3">
+    <div class="school-details__courses">
+        <h4 class="school-details__courses-header">Courses</h4>
+        <app-courses-table class="school-details__courses-table" [courses]="school.coursesData"></app-courses-table>
+    </div>
+</div>

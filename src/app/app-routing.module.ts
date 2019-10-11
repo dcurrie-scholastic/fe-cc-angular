@@ -1,46 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SchoolsTableComponent } from './schools-table/schools-table.component';
-import { SchoolsResolver } from './schools.resolver';
-
-import { CoursesTableComponent } from './courses-table/courses-table.component';
-import { CoursesResolver } from './courses.resolver';
-
-import { TeachersTableComponent } from './teachers-table/teachers-table.component';
-import { TeachersResolver } from './teachers.resolver';
-
-import { StudentsTableComponent } from './students-table/students-table.component';
-import { StudentsResolver } from './students.resolver';
-
 const routes: Routes = [
   {
     path: 'schools',
-    component: SchoolsTableComponent,
-    resolve: {
-      schools: SchoolsResolver
-    }
+    loadChildren: () => import('./schools/schools.module').then(mod => mod.SchoolsModule)
   },
   {
     path: 'courses',
-    component: CoursesTableComponent,
-    resolve: {
-      courses: CoursesResolver
-    }
+    loadChildren: () => import('./courses/courses.module').then(mod => mod.CoursesModule)
   },
   {
-    path: 'teachers',
-    component: TeachersTableComponent,
-    resolve: {
-      teachers: TeachersResolver
-    }
-  },
-  {
-    path: 'students',
-    component: StudentsTableComponent,
-    resolve: {
-      students: StudentsResolver
-    }
+    path: 'people',
+    loadChildren: () => import('./people/people.module').then(mod => mod.PeopleModule)
   },
   { path: '',
     redirectTo: '/schools',

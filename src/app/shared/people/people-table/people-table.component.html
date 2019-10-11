@@ -1,0 +1,19 @@
+<div class="people-table">
+    <h3 class="people-table__header" *ngIf="header">{{header}}</h3>
+    <table class="table table-striped people-table__table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Courses</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of people">
+                <td scope="row"><a [routerLink]="['/people', person.id]">{{person.name.first}} {{person.name.last}}</a></td>
+                <td>{{person.role}}</td>
+                <td>{{person.courses.length}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
